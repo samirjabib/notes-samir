@@ -9,7 +9,7 @@ const oddNumberCounter = (firstNumber, lastNumber) => {
             counter++
         }
 
-        firstNumber++;
+        firstNumber++;  // Hacemos que el numero  aumente cada vez que itere el contador de lo contrario generamos un bucle infinto 
     }    
     return counter;
 }
