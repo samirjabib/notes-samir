@@ -165,7 +165,7 @@ por que este no va a estar definido en el modo estricto de javascript.
 // }
 
 // const samir = new Persona('samir'); //  Cuando instanciamos un objeto con new 
-//                                     // Tambien producimos un enlaceamiento. 
+                                    // Tambien producimos un enlaceamiento. 
 
 
 // Lexical Binding.(Arrow Functions)

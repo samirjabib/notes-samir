@@ -1,10 +1,7 @@
 /* Que es el polyfill 
 
-    Es una funcionalidad que deberia tener el navegador pero por un tema 
-    de que no ha sido implementado, el polyfill suple esa carencia de codigo.
-
-
-    Y para nosotros es completamente transparente
+    Es una pieza de codigo de javascript que se usa para proporcionar o completar
+    alguna funcionalidad que es compatible en un navegador pero ne otro no lo es. 
 
 
 */
@@ -12,9 +9,11 @@
 const arr = [1,2,3,4,5]
 
 // Simulate browser incompatibility
-Array.prototype.forEach = null
+Array.prototype.forEach = null //Borramos el metodo forEach del prototipo de array
 
 
+
+//Polyfill
 if(!Array.prototype.forEach)
 {
    Array.prototype.forEach = function(callbackFunction){
