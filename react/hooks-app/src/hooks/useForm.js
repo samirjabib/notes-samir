@@ -31,7 +31,7 @@ export const useForm = ( initialForm = {} ) => {    /*
 
     return {
         ...formState,/*
-                     Creamos un objeto con el spread operator con las propiedades del estado.   
+                     Creamos un copia del objeto con el spread operator con las propiedades del estado.   
                     */
         formState,
         onInputChange,
