@@ -1,0 +1,25 @@
+ ¿ Que es ajax ?
+
+    Esta palabra es el acronico de
+
+        Asynchronous
+        Javacript
+        And
+        XML
+
+        ¿ Que es un proceso asincrono ?
+
+            un proceso sincrono donde se ejecutan una serie de pasos uno seguido del otro, la cual se tuvo que completar un paso para poder 
+            con los pasos.
+
+            un proceso asincrono es un proceso donde no sabemos cuando va a terminar, del cual no tenemos certeza cuanto demorara en completarse
+
+
+    Entonces AJAX es una tenica con que hacemos peticiones asincronas en javascript hacia un servidor. 
+
+    La manera mas comun antes de enviar y recibir datos en un servidor antes es con el objeto XML.
+
+    la tenica ajax se basa en el uso del objeto XMLHttRequest para realizar las peticiones hacia los servidores, hoy en dia ahi formas mas modernos como el 
+    objeto fetch.
+
+    
