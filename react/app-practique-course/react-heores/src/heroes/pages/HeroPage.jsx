@@ -5,18 +5,22 @@ import { getHeroById } from '../helpers';
 
 export const HeroPage = () => {
 
-  const { id } = useParams();
+  const { id } = useParams(); /*
+                                  Este hook nos permite obetner el argumento enviado del componente padre mediante el URL              
+  
+                              */
   const navigate = useNavigate();
 
-  const hero = useMemo( () => getHeroById( id ), [ id ]); 
+  const hero = useMemo( () => getHeroById( id ), [ id ]); //Usamos el useMemo para retener en memoria la variable, obtenemos el heore mediante la funcion auxu getHeroId enviandoselo por parametros
+
 
   const onNavigateBack = () => {
-    navigate(-1);
+    navigate(-1); //Usamos el -1 ya que este nos devuelve un paso atras en el historial.
   }
 
 
   if ( !hero ) {
-    return <Navigate to="/marvel" />
+    return <Navigate to="/marvel" /> //Si no recibimos ningun heore navegamos a la ruta por default selecionada.
   }
   
   return (

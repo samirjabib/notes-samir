@@ -7,27 +7,32 @@ import { getHeroesByName } from '../helpers';
 
 export const SearchPage = () => {
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate = useNavigate(); //Usamos el Hook que nos permite programar hacia donde queremos ir.
+  const location = useLocation(); /*
+
+                                  Este hook nos retorna una funcion que nos devuelve la actual locacion del objeto,
+                                  Es util si queremos realizar un efecto secundario cada vez que cambie la locacion
+  
+                                  */
 
   const { q = '' } = queryString.parse( location.search );
-  const heroes = getHeroesByName(q);
+  const heroes = getHeroesByName(q); //Usamos la funcion aux y le enviamos Q como parametro. 
 
   const showSearch = (q.length === 0);
   const showError  = (q.length > 0) && heroes.length === 0;
 
 
   const { searchText, onInputChange } = useForm({
-    searchText: q
+    searchText: q //Usamos el hook useForm para el formulario
   });
 
 
 
   const onSearchSubmit = (event) =>{
-    event.preventDefault();
+    event.preventDefault(); //Usamos el preventDefault para prevenir el bubbling.
     // if ( searchText.trim().length <= 1 ) return;
 
-    navigate(`?q=${ searchText }`);
+    navigate(`?q=${ searchText }`); //Navegamos a la ruta seleccionada pasandole por querys. 
   }
 
 

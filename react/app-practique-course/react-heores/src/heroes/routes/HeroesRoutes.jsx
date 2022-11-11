@@ -27,7 +27,13 @@ export const HeroesRoutes = () => {
                 <Route path="dc" element={<DcPage />} />
                 
                 <Route path="search" element={<SearchPage />} />
-                <Route path="hero/:id" element={<HeroPage />} />
+                <Route path="hero/:id" element={<HeroPage />} /> 
+                                                                  
+                                                                  {/* con la sintasis de los : depues del lo que le estamos indicando 
+                                                                  que cree una nueva ruta dinamica, con el parametro que recibimos
+                                                                  ya que este argumento lo vamos a leer via URL
+                                                                   */}
+                                                                 
                                 
 
                 <Route path="/" element={<Navigate to="/marvel" />} />  
