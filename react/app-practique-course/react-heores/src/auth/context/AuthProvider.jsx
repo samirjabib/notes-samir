@@ -32,6 +32,8 @@ export const AuthProvider = ({ children }) => { //Creamos un hight order compone
             
         }
 
+        localStorage.setItem('user',JSON.stringify(user)) //Agregamos el objeto a la propiedad creada del localstorage, usamos la propiedad stringity por que en el local storage solo podemos grabar este.
+
         dispatch(action) //Despachamos al funcion que vamos a usar. 
 
     }
