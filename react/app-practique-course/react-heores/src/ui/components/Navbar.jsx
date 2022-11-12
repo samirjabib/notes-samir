@@ -7,9 +7,6 @@ export const Navbar = () => {
 
     const { user } = useContext(AuthContext); //Invocamos  y desectructuramos el contexto con el hook useContext, para acceder a los datos que nos provee el contexto de Auth. 
 
-    console.log(user);
-
-    const onLogin = () => { //Creamos la funcion para logear
 
 
         const navigate = useNavigate(); /* 
@@ -20,10 +17,7 @@ export const Navbar = () => {
                                         atras del historial
                                      */
 
-    }
-    
 
-    
 
     const onLogout = () => { //Creamos la funcion para deslogear y recibimos el event por parametro.
         navigate('/login', {  //Este objeto navigate contiene el state, y replace. 
@@ -78,7 +72,7 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
                    
                     <span className="nav-item nav-link text-primary">
-                        {user}
+                        {user?.name}
                     </span>
 
                     <button
