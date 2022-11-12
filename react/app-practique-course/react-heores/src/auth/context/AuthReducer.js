@@ -13,7 +13,7 @@ export const authReducer = ( state = initialState, action ) => {
                 return { //Devolvemos el nuevo estado en caso de que accionemos esta accion 
                 ...state,//Le pasamos el state, para mantener el state anterior. 
                 logged:true, //Declaramos el estado en true. 
-                name:action.payload, //El nuevo estado que devolveremos mediante el payload, en este caso el nombre
+                user:action.payload, //El nuevo estado que devolveremos mediante el payload, en este caso el nombre
             };
 
         case types.logout:

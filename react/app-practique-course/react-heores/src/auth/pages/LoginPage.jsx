@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context';
 
 export const LoginPage = () => {
+
+  const { login } = useContext(AuthContext) //Invocamos el contexto a el modulo con el Hook useContext del cual vamos a desectructurar el login
 
   const navigate = useNavigate(); /*
                                     Usamos este custom Hook que nos devuelve una funcion que nos permite
@@ -8,6 +12,10 @@ export const LoginPage = () => {
                                   */
 
   const onLogin = () => {
+
+    login('Samir Jabib ') //Usamos la funcion Login la cual va a recibir por argumentos hacia los parametros los datos. 
+
+
     navigate('/', { //Le pasamos como primer parametro al ruta hacia la cual queremos navegar
       replace: true //Nos sirve para evitar que la persona retroceda en el historial
     });
