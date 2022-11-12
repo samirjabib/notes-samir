@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import queryString from 'query-string'
+import queryString from 'query-string' //Este modulo nos ayuda a tomar el valor del query parameter.
 
 import { useForm } from '../../hooks/useForm';
 import { HeroCard } from '../components';
@@ -15,7 +15,7 @@ export const SearchPage = () => {
   
                                   */
 
-  const { q = '' } = queryString.parse( location.search );
+  const { q = '' } = queryString.parse( location.search ); //parse nos convierte el objeto en json o lo analiza como json
   const heroes = getHeroesByName(q); //Usamos la funcion aux y le enviamos Q como parametro. 
 
   const showSearch = (q.length === 0);
