@@ -1,6 +1,7 @@
 /* -----------------Objeto Map-----------------------------
 
-El objeto Map es un diccionario clave-valor donde cualquier tipo puede ser usado como clave. Esta es la principal característica de los mapas y su mayor diferencia con los objetos, donde las claves sólo pueden ser cadenas de texto. En los objetos Map cualquier elemento, incluidos los objetos como matrices o funciones, pueden ser claves para localizar valores.
+El objeto Map es un diccionario clave-valor donde cualquier tipo puede ser usado como clave. Esta es la principal característica de los mapas y su mayor diferencia con los objetos, 
+donde las claves sólo pueden ser cadenas de texto. En los objetos Map cualquier elemento, incluidos los objetos como matrices o funciones, pueden ser claves para localizar valores.
 
 Los Map se utilizan con una sencilla interfaz donde los principales métodos son:
 

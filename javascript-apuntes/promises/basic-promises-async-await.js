@@ -72,7 +72,7 @@ const call = async (url) => { //Asinc nos transforma la funcion en una asincrona
 
     try{ //Podemos usar multiple try catch
         const response = await request(url); //El objetivo de esto es esperar que se resuelva la promesa para seguir con la ejecucion del codigo, con esto en forma secuencial.
-     
+        console.log(response)
     } catch (error) {
         console.log(error)
         response = 2;
@@ -81,6 +81,7 @@ const call = async (url) => { //Asinc nos transforma la funcion en una asincrona
 
     try{
         const response2 = await request(url);
+        console.log(resposne2)
         
     } catch (error) {
         console.log(error)

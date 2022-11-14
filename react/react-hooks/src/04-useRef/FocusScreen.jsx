@@ -32,8 +32,7 @@ export const FocusScreen = () => {
     const onClick = () => {
         // document.querySelector('input').select();
         // console.log(inputRef);
-        inputRef.current.select(); // seleccionamos el 
-    }
+        console.log(inputRef.current.value) // Esto nos devuelve la propiedad current que con ella trae todos las propiedades del objeto seleccionado con ref
 
 
   return (

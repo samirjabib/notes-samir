@@ -4,15 +4,11 @@ import { useCounter } from '../hooks';
 /*
     El hook useMemo sirve para memorizar valores lo cual nos ayuda a mejorar el performance de nuestros componentes.
 
-
     Este hook recibe por parámetro una función para crear un valor a memorizar y por segundo parámetro un array de dependencias.
 
     const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b])
 
     Es especialmente útil cuando el valor a memorizar es producto de un cálculo que consume "mucha" memoria y procesamiento.
-
-
-    
 
 */
 
@@ -60,3 +56,8 @@ export const MemoHook = () => {
         </>
     )
 }
+
+
+// 2 common use cases of useMemo:
+// 1. When you want to make a slow function wrap inside useMemo so that doesn't re-compute every single time you render your component and it only computed when you acually need the value from that function since the inputs actually change
+// 2. Whenever you want to make sure the reference of an object or an array is exactly the same as it was the last time you rendered if none of the internal workings changed, you're gonna want 

@@ -35,10 +35,10 @@ const addTodoAction = {
 }
 
 
-todos = todoReducer( todos, addTodoAction ); //
+todos = todoReducer( todos, addTodoAction ); // Pasamos por argumentos, el estado inicial y la accion que queremos realizar. 
 
 
-console.log({state: todos})
+console.log({state: todos}) // hacemos un console.log del estado.
 
 
 

@@ -7,7 +7,7 @@ const multiply = n => n * 2;
 const print = n => console.log(n);
 
 
-const request = url => {
+const request = (url) => {
     const req = new XMLHttpRequest();
     req.open('GET', url); //Le indicamos el metodo que queremos ultilizar y seguido la URL a la cual queremos hacer la peticion 
 

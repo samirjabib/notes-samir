@@ -4,7 +4,7 @@ import { Message } from './Message';
 
 /* Que hace el hook useEffect ?
 
-    es un tipo de hook que se incorporó en la versión de React 16.8. Como su nombre indica, este hook nos permite definir efectos.
+    Es un tipo de hook que se incorporó en la versión de React 16.8. Como su nombre indica, este hook nos permite definir efectos.
 
     Los efectos en esta librería de JavaScript nos permiten ejecutar un trozo de código según el momento en el que se encuentre el 
     ciclo de vida de nuestro componente. Antes ya hemos visto que podemos usarlo para ejecutar una acción específicamente después 
@@ -38,7 +38,7 @@ export const SimpleForm = () => {
                                pasamos primero la propiedad que estableceremos, y el valor sera igual al
                                nuevo value. 
 
-                               tener cuidado al establecer una nueva props por que se va a crear.
+                               tener cuidado al establecer una nueva propiedad por que se va a crear.
                             */
         });
     }
