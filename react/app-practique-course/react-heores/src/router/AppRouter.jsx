@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { HeroesRoutes } from '../heroes';
 import { LoginPage } from '../auth';
+import { PrivateRoute } from './PrivatedRoute';
 
 
 
@@ -9,7 +10,7 @@ export const AppRouter = () => {
   return (
     <>
         <Routes>
-                /*
+                {/* /*
                   Esta nos sirve para envolver un set de rutas hijo en la locacion
                   actual.
 
@@ -20,16 +21,20 @@ export const AppRouter = () => {
                   Los elementos pueden estar anidados para indicar una UI anidada, 
                   que también se corresponde con rutas URL anidadas. 
                   
-                  Las rutas padre renderizan sus rutas hijas renderizando un Outlet.
+                  Las rutas padre renderizan sus rutas hijas renderizando un Outlet. */}
                  */
             
             <Route path="login" element={<LoginPage />} />
             
-            
-            <Route path="/*" element={ <HeroesRoutes />} /> 
-            
-            
-
+            <Route path='/*' element={ 
+                // con el  * le indicamos a esto que todas nuestran rutas van a pasar por aqui 
+              <PrivateRoute> 
+                  {/* Envolvemos nuestros componentes dentro de  nuestro componente de rutas privadas para aplicar la condicional */}
+                <HeroesRoutes />
+              </PrivateRoute>
+              } 
+              />
+   
         </Routes>
     
     </>
