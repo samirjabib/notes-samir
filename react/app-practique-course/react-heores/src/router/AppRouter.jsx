@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { HeroesRoutes } from '../heroes';
 import { LoginPage } from '../auth';
 import { PrivateRoute } from './PrivatedRoute';
-
+import { PublicRoute } from './PublicRoute';
 
 
 export const AppRouter = () => {
@@ -23,8 +23,16 @@ export const AppRouter = () => {
                   
                   Las rutas padre renderizan sus rutas hijas renderizando un Outlet. */}
                  */
-            
-            <Route path="login" element={<LoginPage />} />
+      
+            <Route path='login' element={
+              <PublicRoute>
+                <LoginPage/>
+              </PublicRoute>
+
+            }/>
+
+
+
             
             <Route path='/*' element={ 
                 // con el  * le indicamos a esto que todas nuestran rutas van a pasar por aqui 
