@@ -8,7 +8,6 @@ import { LoginPage } from '../auth';
 export const AppRouter = () => {
   return (
     <>
-
         <Routes>
                 /*
                   Esta nos sirve para envolver un set de rutas hijo en la locacion
@@ -22,13 +21,12 @@ export const AppRouter = () => {
                   que también se corresponde con rutas URL anidadas. 
                   
                   Las rutas padre renderizan sus rutas hijas renderizando un Outlet.
-                
                  */
             
             <Route path="login" element={<LoginPage />} />
             
             
-            <Route path="/*" element={ <HeroesRoutes />} />
+            <Route path="/*" element={ <HeroesRoutes />} /> 
             
             
 

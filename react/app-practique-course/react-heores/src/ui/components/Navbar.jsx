@@ -5,7 +5,7 @@ import { AuthContext,  } from '../../auth';
 
 export const Navbar = () => {
 
-    const { user } = useContext(AuthContext); //Invocamos  y desectructuramos el contexto con el hook useContext, para acceder a los datos que nos provee el contexto de Auth. 
+    const { user, logout } = useContext(AuthContext); //Invocamos  y desectructuramos el contexto con el hook useContext, para acceder a los datos que nos provee el contexto de Auth. 
 
 
 
@@ -20,6 +20,7 @@ export const Navbar = () => {
 
 
     const onLogout = () => { //Creamos la funcion para deslogear y recibimos el event por parametro.
+        logout();//Invocamos el metodo que nos provee nuestro contexto de auth. 
         navigate('/login', {  //Este objeto navigate contiene el state, y replace. 
             replace: true //El Replace evita que la persona pueda regresar al historial anterior.
         });
