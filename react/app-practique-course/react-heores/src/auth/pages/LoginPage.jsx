@@ -16,7 +16,10 @@ export const LoginPage = () => {
     login('Samir Jabib ') //Usamos la funcion Login la cual va a recibir por argumentos hacia los parametros los datos. 
 
 
-    navigate('/', { //Le pasamos como primer parametro al ruta hacia la cual queremos navegar
+    const lastPath = localStorage.getItem('lastPath' || '/') //Con esta funcion le indiciamos si exist eel lastPath o si no lo llevamos a la ruta home
+
+
+    navigate(lastPath, { //Le pasamos como primer parametro al ruta hacia la cual queremos navegar en este caso nuestra variable si no fuera algo asi "/"
       replace: true //Nos sirve para evitar que la persona retroceda en el historial
     });
   }
