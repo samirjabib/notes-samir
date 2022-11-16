@@ -9,9 +9,8 @@ export const HeroesApp = () => {
           acceso al contexto del Auth a todos los componentes que envuelve, y a sus hijos */}
           <AppRouter />
                       {/* 
-                          Invocamos las rutas de la aplicacion.
-                          
-          */ }
+                          Invocamos las rutas de la aplicacion.  
+                      */ }
     </AuthProvider>
   )
 }

@@ -17,7 +17,7 @@
   The bubbling not always occures, not all the events have this phase depends of the type
   of the event.
 
-  This event when the target execute the envent, start to search if the elements parents
+  This event when the target execute the event, start to search if the elements parents
   have exist a listener for the same type de event and execute it too
 */
 

@@ -1,5 +1,4 @@
 import { types } from "../types/types"; //Importamos las acciones a realizar con el reducer
-import { initialState } from "./inicialState";
 
 export const authReducer = ( state = {}, action ) => {
                                     /*Creamos el authReducer recordando que un reducer es una funcion pura qeu recibe
