@@ -38,23 +38,16 @@ export const RegisterPage = () => {
                 
                 <Grid container spacing={2} sx={{mb: 2, mt: 1}}>
 
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} >
                         <Button variant='contained' fullWidth>
                             Login
-                        </Button>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6}>
-                        <Button variant='contained' fullWidth>
-                            <Google/>
-                            <Typography sx={{ml:1}}>Google</Typography>
                         </Button>
                     </Grid>
 
                     <Grid container diretion='row' justifyContent='end' sx={{mt:1}}>
                         <Typography variant='span'>¿Ya tienes unas cuenta?</Typography>
                         <Link component={RouterLink} sx={{ ml:0.5}} color='inherit' to='/auth/register'>
-                            Register
+                            Ingresar
                         </Link>
 
                     </Grid>
