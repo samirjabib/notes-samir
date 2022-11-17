@@ -2,12 +2,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import logo from './logo.svg'
 import './App.css'
-import { increment, decrement, incrementBy } from './store/slices/counter';
+import { increment, decrement, incrementBy } from './store/slices/counter'; //Inmportamos los acciones reductoras del Slice de counter. 
 
 function App() {
 
-  const { counter } = useSelector( state => state.counter )
-  const dispatch = useDispatch(); 
+  const { counter } = useSelector( state => state.counter ) //Este hook useSelector nos sirve para seleccionar datos del store de redux. 
+  const dispatch = useDispatch(); //Este metodo nos permite usar los datos traidos de redux, en poca palabras nos permite disparar las acciones
   
 
   return (

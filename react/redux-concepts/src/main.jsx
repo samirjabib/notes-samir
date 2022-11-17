@@ -11,9 +11,11 @@ import { TodoApp } from './TodoApp';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={ store }>
-      {/* <App /> */}
+      {/* /*El provider nos sirve para proveer la store de nuestro contexto creado con redux de manera global, ya que este nos
+      permitira coger los datos que tengamos dentro de este en sin importar en que nivel de la App nos encontremos */ }
+      <App />
       {/* <PokemonApp /> */}
-      <TodoApp />
+      {/* <TodoApp /> */}
     </Provider>
   </React.StrictMode>
 )

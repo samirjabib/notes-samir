@@ -6,11 +6,11 @@ import { getPokemons } from './store/slices/pokemon';
 export const PokemonApp = () => {
 
   const dispatch = useDispatch();
-  const { isLoading, pokemons = [], page } = useSelector( state => state.pokemons );
+  const { isLoading, pokemons = [], page } = useSelector( state => state.pokemons ); //Seleccionamos los datos del estado de la store dentro del pokemonSlice.
 
 
   useEffect(() => {
-    dispatch( getPokemons() );    
+    dispatch( getPokemons() ); //Iniciamos la funcion de obtener los pokemones al montarse la App por primera vez. 
   }, [])
   
 
