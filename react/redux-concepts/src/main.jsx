@@ -13,9 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={ store }>
       {/* /*El provider nos sirve para proveer la store de nuestro contexto creado con redux de manera global, ya que este nos
       permitira coger los datos que tengamos dentro de este en sin importar en que nivel de la App nos encontremos */ }
-      <App />
+      {/* <App /> */}
       {/* <PokemonApp /> */}
-      {/* <TodoApp /> */}
+      <TodoApp />
     </Provider>
   </React.StrictMode>
 )

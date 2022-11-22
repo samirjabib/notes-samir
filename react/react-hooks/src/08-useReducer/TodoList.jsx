@@ -4,7 +4,6 @@ import { TodoItem } from "./TodoItem"
 export const TodoList = ({ todos = [], onDeleteTodo, onToggleTodo }) => {
   //Recibimos mediante props, los todos y los metodos que enviamos desde el reducer contenido en el padre
 
-  
   return (
     <ul className="list-group">
         {

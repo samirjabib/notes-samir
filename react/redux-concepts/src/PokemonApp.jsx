@@ -30,7 +30,9 @@ export const PokemonApp = () => {
 
         <button
           disabled={ isLoading }
-          onClick={ () => dispatch( getPokemons(page) ) }
+          onClick={ () => dispatch( getPokemons(page) ) } /*Llamamos aqui la accion que queremos realizar 
+                                                          la cual le pasamos el page, ya que cada vez que esta 
+                                                          se renderiza se le suma 1, y cambiamos la page */
         >
           Next
         </button>

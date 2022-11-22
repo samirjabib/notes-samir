@@ -19,8 +19,6 @@ import { setPokemons, startLoadingPokemons } from './pokemonSlice'; //traemos la
 
     Un Thunk es una tarea asincrona que cuando se resuelva va a llamar una accion a nuestro reducer. 
 
-
-
 */
 
 
@@ -32,11 +30,18 @@ export const getPokemons = ( page = 0 ) => {//Una funcion que regresa ora funcio
         dispatch( startLoadingPokemons() ); //Iniciamos el dispatch para invocar la funcion del slice, y cambios el loading a true.
 
         // TODO: realizar petición http
-        // const resp = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${ page * 10 }`);
+        // const resp = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${ page * 10 }`); //Manera clasica de hacer la peticion
         // const data = await resp.json();
-        const { data } = await pokemonApi.get(`/pokemon?limit=10&offset=${ page * 10 }`);
+        const { data } = await pokemonApi.get(`/pokemon?limit=10&offset=${ page * 10 }`); /*Hacemos la peticion con el metodo http get y le pasamos de manera dinamica la 
+                                                                                            page para poder cambiarla.
+                                                                                            desectructuramos la data de la peticion.  
+                                                                                            */
 
-        dispatch( setPokemons({ pokemons: data.results, page: page + 1 }) );
+        dispatch( setPokemons({ pokemons: data.results, page: page + 1 }) ); /*Despachamos la accion setPokemons que viene de nuestro reducer,  y a esta le pasamos
+                                                                                los resultados de la peticion, mas el numero de pag, para setear la vista inicial. 
+        
+        
+                                                                            */
     }
 }
 

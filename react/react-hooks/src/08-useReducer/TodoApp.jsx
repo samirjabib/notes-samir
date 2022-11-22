@@ -2,10 +2,9 @@ import { useTodos } from '../hooks';
 import { TodoAdd } from './TodoAdd';
 import { TodoList } from './TodoList';
 
-
 export const TodoApp = () => {
 
-    const { todos, todosCount, pendingTodosCount, handleDeleteTodo, handleToggleTodo, handleNewTodo } = useTodos(); //traemos las variables y metodos necesarios del hook de useTodos
+    const { todos, todosCount, pendingTodosCount, handleDeleteTodo, handleToggleTodo, handleNewTodo } = useTodos(); //traemos las variables y metodos necesarios del hook de useTodos 
     
     return (
         <>
@@ -25,14 +24,10 @@ export const TodoApp = () => {
                     <h4>Agregar TODO</h4>
                     <hr />
                     <TodoAdd 
-                        onNewTodo={ handleNewTodo }   //eviamos por props el metodo de añadir.
+                        onNewTodo={ handleNewTodo }   //enviamos por props el metodo de añadir.
                     />
                 </div>
-
-            </div>
-
-
-        
+            </div> 
         </>
     )
 }

@@ -34,6 +34,6 @@ export const store = configureStore({ /*El metodo configureStore nos firme
 
       [todosApi.reducerPath]: todosApi.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware()
-    .concat( todosApi.middleware )
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware() //Con esto llamamos los middlewares, que es una funcion que se ejectuta antes que otras
+    .concat( todosApi.middleware ) //Le concatenamos nuestro todosApi como middleware. 
 })

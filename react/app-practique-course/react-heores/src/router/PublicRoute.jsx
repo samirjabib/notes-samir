@@ -4,9 +4,7 @@ import { AuthContext } from '../auth';
 
 export const PublicRoute = ( { children }) => { 
                                                 /*
-                                            
                                                 Creamos un high order component, que no es mas que un componente que recibe otros componentes hijos.
-
                                                 */
 
 

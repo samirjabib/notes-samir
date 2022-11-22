@@ -50,8 +50,8 @@ export const CounterApp = () => {
                                     Usamos el spread operator, pasando primero el parametro el arreglo para mantener la informacion, 
                                     y despues la variable que vamos a actualizar. 
                                 */
-                    ...state, //Estado a modificar
-                    counter1: counter1 + 1, //Operacion para sumar la pasamos el state.
+                    ...state, //Copia del estado. 
+                    counter1: counter1 + 1, //Operacion para sumar la pasamos el state, en este caso la modificamos ya que nos que re-escribe la propiedad ya existente
                 })}>
                  +1
         </button>

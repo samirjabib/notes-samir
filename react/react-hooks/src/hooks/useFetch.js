@@ -9,7 +9,6 @@ export const useFetch = ( url ) => { // pasamos por parametros el dato que traem
         hasError: null,
     })
 
-
     const getFetch = async () => { //Marcamos la funcion como asincrona ya que estaremos recibiendo respuestas.
 
         setState({

@@ -11,10 +11,7 @@ export const useTodos = () => {
                                                                         Creamos nuestro hook de reducer, le pasamos como primer parametro el reducer, como segundo paramatro va a
                                                                         recibir el estado inicial de este, al no tener nada declarado simplemente le pasamos un arreglo vacio,
                                                                         como tercer parametro le pasamos la funcion init, 
-                                                                        
-    
                                                                         */
-
     useEffect(() => {
       localStorage.setItem('todos', JSON.stringify( todos ) ); // Esta funcion nos ayuda a convertir nuestro estado en un archivo JSON,  pasandole esta como argumento a la funcion. 
     }, [todos]) //Cada vez que los todos cambien esta se va a actualizar
@@ -23,9 +20,8 @@ export const useTodos = () => {
     const handleNewTodo = ( todo ) => { 
         const action = { //creamos nuestra accion y lo que va a contener el payload en este caso sera el todo (id) que recibiremos por parametros.
             type: '[TODO] Add Todo',
-            payload: todo 
+            payload: todo,
         }
-
         dispatch( action ); // despachamos la accion a realizar. 
     }
 

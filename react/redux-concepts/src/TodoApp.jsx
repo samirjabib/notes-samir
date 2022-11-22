@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { useGetTodosQuery, useGetTodoQuery } from './store/apis/todosApi';
+import { useGetTodosQuery, useGetTodoQuery } from './store/apis/todosApi'; //Traemos nuetra funcion de el modulo. 
 
 
 export const TodoApp = () => {
 
-    const [ todoId, setTodoId] = useState(1);
+    const [ todoId, setTodoId] = useState(1); //Creamos un useState para manejar el estado.
     // const { data: todos = [], isLoading } = useGetTodosQuery();
-    const { data: todo, isLoading } = useGetTodoQuery( todoId );
+    const { data: todo, isLoading } = useGetTodoQuery( todoId ); // Usamos nuesro custon hook del cual desectructuramos la data, y el loading
+
 
     const nextTodo = () => {
         setTodoId( todoId + 1 );
